@@ -28,14 +28,29 @@ img {
     margin: 0 auto ;
    /*  padding: 0 30px; */
 }
-
+.section-title {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    padding: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background-color: var(--secondary-color);
+}
 :root{
     /* Colors */
     --white-color: #fff;
     --dark-color: #252525;
     --primary-color: #3b141c;
     --secondary-color: #f3961c;
-    --light-pink-color: #faf4f5;
+    --light-pink-color: #e2c8c8;
     --medium-gray-color: #ccc;
 
     /* Font Size */
@@ -156,6 +171,51 @@ header {
     margin-right: 10px;
 }
 
+/* About section */
+
+.about-section {
+    padding: 120px 40px;
+    background: var(--light-pink-color);
+}
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.about-section .about-image-wrapper .about-image{
+    min-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+.about-section .about-details {
+    padding: 0;
+}
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
+}
+.about-section .social-link-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.about-section .social-link-list .social-link {
+    color: var(--primary-color);
+    
+    font-size: var(--font-size-l);
+    transition: 0.3s ease;
+}
+.about-section .social-link-list .social-link:hover {
+    color: var(--secondary-color);
+}
+
+
 @media screen and (max-width: 900px){
     :root {
           --font-size-m: 1rem;
@@ -213,5 +273,38 @@ header {
         display: block;
         margin-top: 15px;
      }
+/* Hero section */
 
+.hero-section .section-content {
+    flex-direction: column-reverse;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 20px;
+}
+
+.hero-section .hero-image-wrapper {
+    max-width: 300px;
+    margin-top: 20px;
+}
+.hero-section .hero-detailes .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section .hero-detailes :is(.subtitle, .description) {
+    max-width: 100%;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section .hero-detailes .button {
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
 }
