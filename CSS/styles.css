@@ -251,6 +251,18 @@ header {
 .menu-section .menu-list .menu-item .text {
     font-size: var(--font-size-m);
 }
+
+/* Testimonials */
+.testimonial-section {
+    padding: 120px 40px;
+    background-color: var(--light-pink-color);
+}
+.testimonial-section .testimonial {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
 /* Responsive media query for max width 1024px */
 @media screen and (max-width: 1024px) {
 .menu-section .menu-list {
